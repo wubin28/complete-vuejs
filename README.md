@@ -13,6 +13,44 @@ There are two branches:
 - `master` is the completed source code
 - `getting-started` is the minimal template to follow along from start
 
+## How to install node.js/npm, yarn, vue and vite on macOS and run dev server for Lachlan Miller's complete-vuejs 3 course
+
+```
+# Install nvm
+node -v
+brew info node
+brew uninstall node
+brew cleanup
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+# closing and reopening the terminal
+nvm -v
+
+# Install node.js/npm
+nvm install 12.18.3
+nvm alias default 12.18.3
+node -v # v12.18.3
+npm -v # 6.14.6
+
+# Install yarn
+npm install -g yarn@1.22.10
+yarn -v # 1.22.10
+
+# Install vue.js library/runtime into the project
+# create a scaffold project from getting-started branch of complete-vuejs
+cd vue-kata
+yarn add vue@3.0.7
+yarn list vue
+
+# Install vite into the project
+cd vue-kata
+yarn add vite@2.1.1 --dev
+yarn list vite
+
+# Run dev server
+yarn vite src
+```
+
+
 ## Installation
 
 I am using:
